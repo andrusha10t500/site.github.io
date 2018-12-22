@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <meta charset="utf8"/>
+        <title> 
+            1я Страница
+        </title>
+        <script src="/jquery/jquery-3.3.1.min.js"></script>
+        <script src="index.js"></script> 
+        <link rel="stylesheet" href="admin.css">
+    </head>    
+    <body>
+        <div class="admin">            
+            <input id="add_btn" type="button" value="Добавить фото">
+
+            <div hidden id="adds">
+                <input type="text">                
+            </div>            
+            
+        </div>
+            
+        <div id="dv" >
+            <h1 class="gal" >Галерея</h1>
+            <table hidden id="tbl">                
+                <?php echo id_tab(); ?>                                               
+            </table>
+        </div>
+        <div id="dv0" >  
+            <h1>Контакты</h1>          
+                <p hidden>привет</p>
+                <div id="">
+                </div>            
+        </div>
+        <div id="dv1" >            
+                <p hidden>привет</p>
+                <div id="">
+                </div>            
+        </div>        
+    </body>
+
+</html>
