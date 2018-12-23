@@ -1,15 +1,20 @@
 <?php    
-    require_once 'function1.php';    
-    if(db($_POST['login'],$_POST['password1'])!="")    
+    require_once 'function1.php';   
+    $res=db($_POST['login'],$_POST['password1']);  
+    echo $res;      
+    if( $res == 1 || $res == 3)    
     {                
+        header('Location: admin.php');        
+        die();                
+    } 
+    elseif( $res > 3 ) {
         header('Location: function.php');        
-        die();        
-        // require_once('function.php');
+        die();
     }
-    elseif(db($_POST['login'],$_POST['password1'])<3)
-    {
-        
-    }
+    // elseif( $res < 5 || $res > 3) {
+    //     header('Location: admin.php');        
+    //     die();                
+    // }
     elseif($_POST['login']!='' && $_POST['password1']!='')
     {
         {             
@@ -19,5 +24,5 @@
     else{
         echo "<script>alert('Введите логин и пароль!');</script>"; 
     }        
-    require_once('index.html');
+    include 'index.html';
 ?>

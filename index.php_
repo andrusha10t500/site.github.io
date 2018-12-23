@@ -1,0 +1,38 @@
+<?php
+// require_once 'connection.php';
+
+if (!empty($_POST))
+{
+    #$ind = key($_POST['f']);
+    #$func='go'.$ind;
+
+    echo '<pre>';
+    print_r($_POST);
+    die();
+}
+function alert() {
+    echo "<script type='text/javascript'>alert('123');</script>";
+}
+
+// $mysqli = new mysqli($host, $user, $password, $database);
+
+
+// function_exists("id_tab");
+// if (mysqli_connect_errno()){
+//     printf("Connect failed: %s\n", mysqli_connect_errno());
+//     exit();
+// } else {
+//     echo "Connection established!";
+// }
+
+// $mysqli->real_query("SELECT id,users,photo FROM mix_podelki where id=2");
+
+// $res=$mysqli->use_result();
+
+// while($row = $res->fetch_assoc()){    
+//     $res1="<img src=" . $row['photo'] . " height=70 width=90 >";
+//     echo $res1;
+// }
+
+include 'index.html';
+?>

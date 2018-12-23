@@ -19,12 +19,6 @@
             echo 'успешно<br />';
         }
         $row=$res->fetch_assoc();
-        return $row['id'];
-        // while($row=$res->fetch_assoc())
-        // {
-        //     echo $row['id']. "<br />";
-        // }
-        
+        return $row['id'];               
     }
-
 ?>
